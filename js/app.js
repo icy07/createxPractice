@@ -12071,11 +12071,9 @@
               });
         });
       new Tt("max").init();
-      let Ot = document
-        .querySelector(".item-block__slider-main")
-        .querySelectorAll(".item-block__slide");
-      Ot &&
-        Ot.forEach((e) => {
+      let Ot = document.querySelector(".item-block__slider-main");
+      if (Ot) {
+        Ot.querySelectorAll(".item-block__slide").forEach((e) => {
           let s = e.querySelector("img");
           (e.style.backgroundImage = "url(" + s.src + ")"),
             t.any() ||
@@ -12106,85 +12104,82 @@
                 },
                 !1
               ));
-        }),
-        document.addEventListener("click", function (e) {
-          const t = e.target;
-          if (t.closest("[data-parent]")) {
-            const s = t.dataset.parent ? t.dataset.parent : null,
-              i = document.querySelector(`[data-child="${s}"]`),
-              r = document.querySelector(".bottom-header__goods");
-            if (i) {
-              const e = document.querySelector("._active"),
-                s = document.querySelector("._activeItem");
-              e &&
-                e !== t &&
-                (e.classList.remove("_active"),
-                s.classList.remove("_activeItem")),
-                e && e.classList.contains("_active")
-                  ? r.classList.add("_activeGoods")
-                  : r.classList.remove("_activeGoods"),
-                t.classList.toggle("_active"),
-                r.classList.toggle("_activeGoods"),
-                i.classList.contains("_activeItem")
-                  ? setTimeout(function () {
-                      i.classList.toggle("_activeItem");
-                    }, 100)
-                  : i.classList.toggle("_activeItem");
-            }
-            e.preventDefault();
-          }
-          if (t.closest(".bottom-header__back")) {
-            const t = document.querySelector("._active"),
-              s = document.querySelector("._activeItem"),
-              i = document.querySelector(".bottom-header__goods");
-            t.classList.remove("_active"),
-              setTimeout(function () {
-                s.classList.remove("_activeItem");
-              }, 100),
-              i.classList.remove("_activeGoods"),
-              e.preventDefault();
-          }
-          t.closest("#sign-in") &&
-            (document
-              .querySelector(".popup__sign-in")
-              .classList.add("_activePU"),
-            document
-              .querySelector(".popup__sign-up")
-              .classList.remove("_activePU"),
-            e.preventDefault());
-          t.closest("#sign-up") &&
-            (document
-              .querySelector(".popup__sign-up")
-              .classList.add("_activePU"),
-            document
-              .querySelector(".popup__sign-in")
-              .classList.remove("_activePU"),
-            e.preventDefault());
-          t.closest(".filter__main-button") &&
-            (document
-              .querySelector(".filter__main-button")
-              .classList.contains("_spoller-active")
-              ? (document
-                  .querySelector(".catalog__products")
-                  .classList.remove("_active"),
-                document
-                  .querySelector(".catalog__filter")
-                  .classList.remove("_active"))
-              : setTimeout(() => {
-                  document
-                    .querySelector(".catalog__products")
-                    .classList.add("_active"),
-                    document
-                      .querySelector(".catalog__filter")
-                      .classList.add("_active");
-                }, 500));
-          if (t.closest(".info-item__opt-color")) {
-            let e = document.querySelectorAll(".info-item__opt-color"),
-              t = document.querySelector(".info-item__color-name");
-            for (var s = 0; e[s]; ++s)
-              e[s].checked && (t.textContent = e[s].value);
-          }
         });
+      }
+      document.addEventListener("click", function (e) {
+        const t = e.target;
+        if (t.closest("[data-parent]")) {
+          const s = t.dataset.parent ? t.dataset.parent : null,
+            i = document.querySelector(`[data-child="${s}"]`),
+            r = document.querySelector(".bottom-header__goods");
+          if (i) {
+            const e = document.querySelector("._active"),
+              s = document.querySelector("._activeItem");
+            e &&
+              e !== t &&
+              (e.classList.remove("_active"),
+              s.classList.remove("_activeItem")),
+              e && e.classList.contains("_active")
+                ? r.classList.add("_activeGoods")
+                : r.classList.remove("_activeGoods"),
+              t.classList.toggle("_active"),
+              r.classList.toggle("_activeGoods"),
+              i.classList.contains("_activeItem")
+                ? setTimeout(function () {
+                    i.classList.toggle("_activeItem");
+                  }, 100)
+                : i.classList.toggle("_activeItem");
+          }
+          e.preventDefault();
+        }
+        if (t.closest(".bottom-header__back")) {
+          const t = document.querySelector("._active"),
+            s = document.querySelector("._activeItem"),
+            i = document.querySelector(".bottom-header__goods");
+          t.classList.remove("_active"),
+            setTimeout(function () {
+              s.classList.remove("_activeItem");
+            }, 100),
+            i.classList.remove("_activeGoods"),
+            e.preventDefault();
+        }
+        t.closest("#sign-in") &&
+          (document.querySelector(".popup__sign-in").classList.add("_activePU"),
+          document
+            .querySelector(".popup__sign-up")
+            .classList.remove("_activePU"),
+          e.preventDefault());
+        t.closest("#sign-up") &&
+          (document.querySelector(".popup__sign-up").classList.add("_activePU"),
+          document
+            .querySelector(".popup__sign-in")
+            .classList.remove("_activePU"),
+          e.preventDefault());
+        t.closest(".filter__main-button") &&
+          (document
+            .querySelector(".filter__main-button")
+            .classList.contains("_spoller-active")
+            ? (document
+                .querySelector(".catalog__products")
+                .classList.remove("_active"),
+              document
+                .querySelector(".catalog__filter")
+                .classList.remove("_active"))
+            : setTimeout(() => {
+                document
+                  .querySelector(".catalog__products")
+                  .classList.add("_active"),
+                  document
+                    .querySelector(".catalog__filter")
+                    .classList.add("_active");
+              }, 500));
+        if (t.closest(".info-item__opt-color")) {
+          let e = document.querySelectorAll(".info-item__opt-color"),
+            t = document.querySelector(".info-item__color-name");
+          for (var s = 0; e[s]; ++s)
+            e[s].checked && (t.textContent = e[s].value);
+        }
+      });
       let At = 3600;
       const kt = document.querySelector(".blocks__mins"),
         Lt = document.querySelector(".blocks__sec");
