@@ -5,7 +5,7 @@
 	<title>Товар</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20221206225732">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221207200815">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
@@ -84,7 +84,7 @@
 							<i class="_icon-favorite"></i>
 							<span class="bottom-header__fav">0</span>
 						</a>
-						<a href="#" class="bottom-header__cart-block">
+						<a href="#" data-popup="#cart" class="bottom-header__cart-block">
 							<i class="_icon-cart"></i>
 							<span class="bottom-header__cart">0</span>
 						</a>
@@ -314,7 +314,7 @@
 				<div class="item-block__container">
 					<div class="item-block__top">
 						<div class="title">Текстовыделитель Attache</div>
-						<div class="item-block__article"><span>Art. No.</span> 183260098</div>
+						<div class="item-block__article"><span>Art. No. </span><span class="article">183260098</span></div>
 					</div>
 					<div data-tabs class="item-block__main">
 						<nav data-tabs-titles class="item-block__tabs-navigation">
@@ -329,7 +329,7 @@
 										<div class="item-block__slider-main">
 											<div class="item-block__swiper">
 												<div class="item-block__slide">
-													<picture><source srcset="img/itemCard/12.webp"type="image/webp"><img src="img/itemCard/12.jpg" alt="Image"></picture>
+													<picture><source srcset="img/itemCard/12.webp"type="image/webp"><img class="first-img" src="img/itemCard/12.jpg" alt="Image"></picture>
 												</div>
 												<div class="item-block__slide">
 													<picture><source srcset="img/itemCard/08.webp"type="image/webp"><img src="img/itemCard/08.jpg" alt="Image"></picture>
@@ -388,7 +388,7 @@
 									<div class="item-block__info info-item">
 										<div class="info-item__top">
 											<div class="info-item__price-block">
-												<div class="info-item__new-price">₽ 250</div>
+												<div class="info-item__new-price">₽ <span class="item-price">250</span></div>
 												<div class="info-item__old-price">₽ 500</div>
 												<div class="info-item__sale">-50%</div>
 											</div>
@@ -599,12 +599,6 @@
 												<div class="item-card__price-block">
 													<div class="item-card__price item-card__sale">₽ 250</div>
 													<div class="item-card__old-price">₽ 500</div>
-												</div>
-												<div class="item-card__hover-block">
-													<form action="#" class="item-card__form">
-														<button type="submit" class="button _icon-cart green-full-buttton">Добавить в
-															корзину</button>
-													</form>
 												</div>
 											</div>
 										</div>
@@ -895,12 +889,6 @@
 													<div class="item-card__price item-card__sale">₽ 250</div>
 													<div class="item-card__old-price">₽ 500</div>
 												</div>
-												<div class="item-card__hover-block">
-													<form action="#" class="item-card__form">
-														<button type="submit" class="button _icon-cart green-full-buttton">Добавить в
-															корзину</button>
-													</form>
-												</div>
 											</div>
 										</div>
 									</div>
@@ -972,12 +960,6 @@
 											<div class="item-card__price-block">
 												<div class="item-card__price">₽ 49.95</div>
 											</div>
-											<div class="item-card__hover-block">
-												<form action="#" class="item-card__form">
-													<button type="submit" class="button _icon-cart green-full-buttton">Добавить в
-														корзину</button>
-												</form>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -1031,12 +1013,6 @@
 											<div class="item-card__price-block">
 												<div class="item-card__price">₽ 120.60</div>
 											</div>
-											<div class="item-card__hover-block">
-												<form action="#" class="item-card__form">
-													<button type="submit" class="button _icon-cart green-full-buttton">Добавить в
-														корзину</button>
-												</form>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -1077,12 +1053,6 @@
 											<a href="item.html" class="item-card__title">Скрепки</a>
 											<div class="item-card__price-block">
 												<div class="item-card__price">₽ 183.45</div>
-											</div>
-											<div class="item-card__hover-block">
-												<form action="#" class="item-card__form">
-													<button type="submit" class="button _icon-cart green-full-buttton">Добавить в
-														корзину</button>
-												</form>
 											</div>
 										</div>
 									</div>
@@ -1137,12 +1107,6 @@
 											<div class="item-card__price-block">
 												<div class="item-card__price">₽ 49.95</div>
 											</div>
-											<div class="item-card__hover-block">
-												<form action="#" class="item-card__form">
-													<button type="submit" class="button _icon-cart green-full-buttton">Добавить в
-														корзину</button>
-												</form>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -1196,12 +1160,6 @@
 											<div class="item-card__price-block">
 												<div class="item-card__price">₽ 120.60</div>
 											</div>
-											<div class="item-card__hover-block">
-												<form action="#" class="item-card__form">
-													<button type="submit" class="button _icon-cart green-full-buttton">Добавить в
-														корзину</button>
-												</form>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -1242,12 +1200,6 @@
 											<a href="item.html" class="item-card__title">Ручки</a>
 											<div class="item-card__price-block">
 												<div class="item-card__price">₽ 183.45</div>
-											</div>
-											<div class="item-card__hover-block">
-												<form action="#" class="item-card__form">
-													<button type="submit" class="button _icon-cart green-full-buttton">Добавить в
-														корзину</button>
-												</form>
 											</div>
 										</div>
 									</div>
@@ -1321,12 +1273,6 @@
 												<div class="item-card__price item-card__sale">₽ 89.50</div>
 												<div class="item-card__old-price">₽ 179.00</div>
 											</div>
-											<div class="item-card__hover-block">
-												<form action="#" class="item-card__form">
-													<button type="submit" class="button _icon-cart green-full-buttton">Добавить в
-														корзину</button>
-												</form>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -1370,12 +1316,6 @@
 												<div class="item-card__price item-card__sale">₽ 40.00</div>
 												<div class="item-card__old-price">₽ 80.00</div>
 											</div>
-											<div class="item-card__hover-block">
-												<form action="#" class="item-card__form">
-													<button type="submit" class="button _icon-cart green-full-buttton">Добавить в
-														корзину</button>
-												</form>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -1418,12 +1358,6 @@
 											<div class="item-card__price-block">
 												<div class="item-card__price item-card__sale">₽ 119.16</div>
 												<div class="item-card__old-price">₽ 148.95</div>
-											</div>
-											<div class="item-card__hover-block">
-												<form action="#" class="item-card__form">
-													<button type="submit" class="button _icon-cart green-full-buttton">Добавить в
-														корзину</button>
-												</form>
 											</div>
 										</div>
 									</div>
@@ -1480,12 +1414,6 @@
 												<div class="item-card__price item-card__sale">₽ 89.50</div>
 												<div class="item-card__old-price">₽ 179.00</div>
 											</div>
-											<div class="item-card__hover-block">
-												<form action="#" class="item-card__form">
-													<button type="submit" class="button _icon-cart green-full-buttton">Добавить в
-														корзину</button>
-												</form>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -1529,12 +1457,6 @@
 												<div class="item-card__price item-card__sale">₽ 40.00</div>
 												<div class="item-card__old-price">₽ 80.00</div>
 											</div>
-											<div class="item-card__hover-block">
-												<form action="#" class="item-card__form">
-													<button type="submit" class="button _icon-cart green-full-buttton">Добавить в
-														корзину</button>
-												</form>
-											</div>
 										</div>
 									</div>
 								</div>
@@ -1577,12 +1499,6 @@
 											<div class="item-card__price-block">
 												<div class="item-card__price item-card__sale">₽ 119.16</div>
 												<div class="item-card__old-price">₽ 148.95</div>
-											</div>
-											<div class="item-card__hover-block">
-												<form action="#" class="item-card__form">
-													<button type="submit" class="button _icon-cart green-full-buttton">Добавить в
-														корзину</button>
-												</form>
 											</div>
 										</div>
 									</div>
@@ -1804,7 +1720,28 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221206225732"></script>
+
+	<div id="cart" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content popup__content--cart">
+				<button data-close type="button" class="popup__close _icon-cross"></button>
+				<div class="popup__cart-wrapper cart">
+					<div class="popup__title">
+						Корзина
+					</div>
+					<div class="cart__empty">
+						Корзина пуста
+					</div>
+					<div class="cart__items">
+					</div>
+					<a href="#" class="cart__order green-full-buttton hidden">
+						Оформить заказ
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20221207200815"></script>
 </body>
 
 </html>
